@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-GaSchedulePlanner::Application.config.secret_token = 'e36d4216a98818a9558c079a6c86a8470dce4656cd42684a331dea7f778e109ae827301c18d1ed4a10990546c7e3cdfa143d2ae803786600a4a2f01ca73f31f9'
+GaSchedulePlannerApp::Application.config.secret_token = '25eb70369982ec5a2599d88df4a86177ec0e28dd5a282fca622038e53f19a76edc20669f4ce929924a91ed49205c73edede93760d9ff35faeae01ec5895d47bc'
