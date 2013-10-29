@@ -17,42 +17,78 @@ lesson4 = Lesson.create(course_id: course2[:id], frequency: 'daily', url: 'http:
 lesson5 = Lesson.create(course_id: course3[:id], frequency: "Tues & Thurs", url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
 lesson6 = Lesson.create(course_id: course3[:id], frequency: "Mon & Weds", url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
 
+room1 = Classroom.create(name: "St. Ann's", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+room2 = Classroom.create(name: "Lime Hall", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+room3 = Classroom.create(name: "Negril", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+room4 = Classroom.create(name: "Montego Bay", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+room5 = Classroom.create(name: "Runaway Bay", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+room6 = Classroom.create(name: "Port Antonio", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
+
+
+
+# Producers
+
+
 # Instructors
+
+user = User.create(first_name: "Gerry___1", last_name: "Inst__1")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user1[:id], lesson_id: lesson1[:id])
+
+user = User.create(first_name: "Jo", last_name: "Mama")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson2[:id])
+
+user = User.create(first_name: "Jane", last_name: "Smith")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson3[:id])
+
+user = User.create(first_name: "Jimmy", last_name: "Cliff")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson4[:id])
+
+user = User.create(first_name: "Ziggy", last_name: "Marley")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson5[:id])
+
+user = User.create(first_name: "Bill", last_name: "Clinton")
+Authorization.create(user_id: user[:id], role_id: role_auth[:id])
+InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson6[:id])
 
 # Students
 20.times do |i|
   user = User.create(first_name: "Bob____#{i}", last_name: "Marley___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson1[:id], payment_status: 'paid')
 end
 
 20.times do |i|
   user = User.create(first_name: "Jane____#{i}", last_name: "Smith___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson2[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
   user = User.create(first_name: "Larry____#{i}", last_name: "Tony___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson3[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
   user = User.create(first_name: "____#{i} Bob", last_name: "Andew___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson4[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
   user = User.create(first_name: "____#{i} Stacy", last_name: "Jones___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson5[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
   user = User.create(first_name: "____#{i} John", last_name: "Adams___#{i}")
-  authorisation = Authorization.create(user_id: user[:id], role_id: role_read[:id])
+  authorisation = Authorization.create(user_id: user[:id], role_id: role_auth[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson4[:id], payment_status: 'paid')
 end
 
