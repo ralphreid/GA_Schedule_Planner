@@ -8052,7 +8052,7 @@ belongs_to :course}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{-0, -0}, {908, 746}}</string>
+		<string>{{-0, -0}, {682, 746}}</string>
 		<key>ListView</key>
 		<false/>
 		<key>OutlineWidth</key>
@@ -8066,7 +8066,7 @@ belongs_to :course}</string>
 		<key>SidebarWidth</key>
 		<integer>126</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 132}, {596, 404.66666666666663}}</string>
+		<string>{{14, 0}, {445.33333333333331, 404.66666666666669}}</string>
 		<key>Zoom</key>
 		<real>1.5</real>
 		<key>ZoomValues</key>
