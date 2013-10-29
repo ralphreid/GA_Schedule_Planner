@@ -1,9 +1,9 @@
 class InstructorAllocation < ActiveRecord::Base
   
-  attr_accessible :user_id, :lesson_id
+  attr_accessible :instructor_id, :lesson_id
 
-  belong_to :users
-  belong_to :courses
+  belongs_to :instructor
+  belongs_to :lesson
 
 
 end

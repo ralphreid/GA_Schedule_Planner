@@ -974,7 +974,7 @@ belongs_to :role}</string>
 \fs20 \
 
 \f0\b0\fs16 belongs_to :instructor\
-belongs_to :course}</string>
+belongs_to :lesson}</string>
 						<key>VerticalPad</key>
 						<integer>8</integer>
 					</dict>
@@ -2755,8 +2755,8 @@ has_many :users, :through =&gt; :authorizations}</string>
 \f1\b RoomBooking
 \fs20 \
 
-\f0\b0\fs16 belongs_to :lessons\
-belongs_to :classrooms }</string>
+\f0\b0\fs16 belongs_to :lesson\
+belongs_to :classroom}</string>
 						<key>VerticalPad</key>
 						<integer>8</integer>
 					</dict>
@@ -4543,7 +4543,7 @@ belongs_to :classrooms }</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs16 \cf0 date}</string>
+\f0\fs16 \cf0 string}</string>
 								<key>VerticalPad</key>
 								<integer>3</integer>
 							</dict>
@@ -4616,7 +4616,7 @@ belongs_to :classrooms }</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs16 \cf0 enrollment_date}</string>
+\f0\fs16 \cf0 payment_status}</string>
 								<key>VerticalPad</key>
 								<integer>3</integer>
 							</dict>
@@ -4625,7 +4625,7 @@ belongs_to :classrooms }</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{121.52324422200525, 509.34532023389693}, {59.8094482421875, 16}}</string>
+							<string>{{121.52324422200525, 509.34532023389693}, {59.8094482421875, 18}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -4683,13 +4683,6 @@ belongs_to :classrooms }</string>
 								<integer>0</integer>
 								<key>Pad</key>
 								<integer>6</integer>
-								<key>Text</key>
-								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
-
-\f0\fs16 \cf0 string}</string>
 								<key>VerticalPad</key>
 								<integer>3</integer>
 							</dict>
@@ -4698,7 +4691,7 @@ belongs_to :classrooms }</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{37.333333333333371, 509.34532023389693}, {84.189910888671875, 16}}</string>
+							<string>{{37.333333333333371, 509.34532023389693}, {84.189910888671875, 18}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -4756,13 +4749,6 @@ belongs_to :classrooms }</string>
 								<integer>0</integer>
 								<key>Pad</key>
 								<integer>6</integer>
-								<key>Text</key>
-								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
-
-\f0\fs16 \cf0 payment_status}</string>
 								<key>VerticalPad</key>
 								<integer>3</integer>
 							</dict>
@@ -7970,7 +7956,7 @@ belongs_to :course}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-10-28 17:34:29 +0000</string>
+	<string>2013-10-29 13:54:52 +0000</string>
 	<key>Modifier</key>
 	<string>Ralph Reid</string>
 	<key>NotesVisible</key>
@@ -8066,7 +8052,7 @@ belongs_to :course}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{-0, -0}, {775, 746}}</string>
+		<string>{{-0, -0}, {908, 746}}</string>
 		<key>ListView</key>
 		<false/>
 		<key>OutlineWidth</key>
@@ -8080,7 +8066,7 @@ belongs_to :course}</string>
 		<key>SidebarWidth</key>
 		<integer>126</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 53.333333333333336}, {507.33333333333331, 404.66666666666669}}</string>
+		<string>{{0, 132}, {596, 404.66666666666663}}</string>
 		<key>Zoom</key>
 		<real>1.5</real>
 		<key>ZoomValues</key>

@@ -2,8 +2,8 @@ class RoomBooking < ActiveRecord::Base
   
   attr_accessible :lesson_id, :classroom_id, :start, :finish
 
-  has_many :lessons
-  has_many :classrooms 
+  belongs_to :lesson
+  belongs_to :classroom 
 
 
 end
