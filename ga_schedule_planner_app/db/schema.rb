@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(:version => 20131029134848) do
     t.date    "end"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string "name"
+    t.string "description"
+  end
+
   create_table "room_bookings", :force => true do |t|
     t.integer "lesson_id"
     t.integer "classroom_id"

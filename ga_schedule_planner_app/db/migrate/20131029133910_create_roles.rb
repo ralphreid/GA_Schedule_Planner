@@ -1,5 +1,5 @@
 class CreateRoles < ActiveRecord::Migration
-  def Change
+  def change
 
     create_table :roles do |t|
       t.string :name
