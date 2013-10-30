@@ -1,6 +1,6 @@
 class AuthorizationsController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class AuthorizationsController < ApplicationController
   end
 
   def index 
-    @authorizations = Authorization.all
+    # @authorizations = Authorization.all
   end
 
   def new 

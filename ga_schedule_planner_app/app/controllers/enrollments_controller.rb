@@ -1,6 +1,6 @@
 class EnrollmentsController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class EnrollmentsController < ApplicationController
   end
 
   def index 
-    @enrollments = Enrollment.all
+    # @enrollments = Enrollment.all
   end
 
   def new 

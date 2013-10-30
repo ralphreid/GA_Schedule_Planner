@@ -1,6 +1,6 @@
-class CoursesController < ApplicationController
+class ClassroomsController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   end
 
   def index 
-    @courses = Course.all
+
   end
 
   def new 

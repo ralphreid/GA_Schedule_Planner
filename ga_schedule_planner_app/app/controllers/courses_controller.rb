@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   end
 
   def index 
-    @courses = Course.all
+    # @courses = Course.all
   end
 
   def new 
@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    @course = Course.find(params[:id])
+    # @course = Course.find(params[:id])
   end
 
   def update

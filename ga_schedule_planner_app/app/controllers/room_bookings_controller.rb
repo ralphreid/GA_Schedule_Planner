@@ -1,6 +1,6 @@
 class RoomBookingsController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class RoomBookingsController < ApplicationController
   end
 
   def index 
-    @roombookings = RoomBooking.all
+    # @roombookings = RoomBooking.all
   end
 
   def new 

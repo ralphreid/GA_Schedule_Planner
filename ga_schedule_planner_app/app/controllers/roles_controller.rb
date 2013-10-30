@@ -1,6 +1,6 @@
 class RolesController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class RolesController < ApplicationController
   end
 
   def index 
-    @roles = Role.all
+    # @roles = Role.all
   end
 
   def new 

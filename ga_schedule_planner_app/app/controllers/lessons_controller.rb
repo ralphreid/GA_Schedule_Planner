@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class LessonsController < ApplicationController
   end
 
   def index 
-    @lessons = Lesson.all
+   
   end
 
   def new 

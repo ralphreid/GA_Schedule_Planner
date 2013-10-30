@@ -3,10 +3,10 @@
 
 = form_tag sessions_path do
   
-  = label :email
-  = email_field :email
+  = label_tag :email
+  = email_field_tag :email
 
-  = label :password
-  = password_field :password
+  = label_tag :password
+  = password_field_tag :password
 
-  = submit tag "Login"  
+  = submit_tag "Login"  
