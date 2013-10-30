@@ -1,0 +1,15 @@
+
+%h1 GA inna da Reggae - Courses
+
+%table
+  %th
+    %tr
+      %th Course Name
+      %th Course Description
+      %th Status
+    %tb
+      - @courses.each do |course|
+        %tr
+          %td= course.name
+          %td= course.description
+          %td= course.status

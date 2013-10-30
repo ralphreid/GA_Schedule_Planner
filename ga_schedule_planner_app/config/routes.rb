@@ -1,4 +1,11 @@
 GaSchedulePlannerApp::Application.routes.draw do
+  
+  root to: 'courses#index'
+  resources :courses
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
