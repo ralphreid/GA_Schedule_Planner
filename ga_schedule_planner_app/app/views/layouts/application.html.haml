@@ -17,7 +17,7 @@
         %ul.right-nav
           %li
             - if current_user
-              logged in as #{current_user.name} ,
+              logged in as #{current_user.first_name} ,
               = link_to 'Logout', logout_path, method: :delete
             -else
               = link_to "Login", login_path
