@@ -2,6 +2,20 @@ GaSchedulePlannerApp::Application.routes.draw do
   
   root to: 'courses#index'
   resources :courses
+  resources :roles
+  resources :authorizations
+  resources :instructor_allocations
+  resources :enrollments
+  resources :users, only: [:index, :new, :create]
+  resources :room_bookings
+  resources :lessons
+  resources :classrooms
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  get "/signup",  to: "users#new",        as: 'signup'
+  get "/login",   to: "sessions#new",    as: 'login'
+  get "/logout",  to: "sessions#destroy", as: 'logout'
 
 
 

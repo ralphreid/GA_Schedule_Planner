@@ -1,6 +1,6 @@
-class CoursesController < ApplicationController
+class LessonsController < ApplicationController
   
-  load_and_authorize_resource
+  # load_and_authorize_resource
 
 
   def show
@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   end
 
   def index 
-    @courses = Course.all
+    @lessons = Lesson.all
   end
 
   def new 
@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    @course = Course.find(params[:id])
+    
   end
 
   def update

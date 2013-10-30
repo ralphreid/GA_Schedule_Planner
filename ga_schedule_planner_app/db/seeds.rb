@@ -6,7 +6,7 @@ role_produce = Role.create(name: 'producer', description: 'placeholder desc for 
 role_student = Role.create(name: 'student', description: 'placeholder desc for student')
 
 
-user_admin = User.create(first_name: "Bob", last_name: "Marley")
+user_admin = User.create(first_name: "Bob", last_name: "Marley", password: 'one', email: "bob@bob")
 Authorization.create(user_id: user_admin[:id], role_id: role_admin[:id])
 
 course1 = Course.create(name: 'WDI', description: 'placeholder desc for WDI course', status: 'active')

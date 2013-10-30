@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   
-  load_and_authorize_resource
+  # load_and_authorize_resource
 
 
   def show
@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    @course = Course.find(params[:id])
+    
   end
 
   def update
