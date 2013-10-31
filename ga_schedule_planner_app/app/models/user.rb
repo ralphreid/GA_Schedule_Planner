@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  attr_accessible :first_name, :last_name, :password, :password_confirmation, :email
+  attr_accessible :full_name, :first_name, :last_name, :password, :password_confirmation, :email
   has_secure_password
 
   has_many :authorizations
@@ -10,5 +10,17 @@ class User < ActiveRecord::Base
   has_many :allocations, foreign_key: 'instructor_id'
   has_many :lessons, :through => :allocations
   belongs_to :course
+
+  # Getter
+  def full_name
+    [first_name, last_name].join(' ')
+  end
+
+  # Setter
+  def full_name=(name)
+    split = name.split
+    self.first_name = split.first
+    self.last_name = split.last
+  end
 
 end

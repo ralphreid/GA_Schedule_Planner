@@ -4,12 +4,10 @@
 %table
   %th
     %tr
-      %th First Name
-      %th Last Name
+      %th Full Name
       %th Email
     %tb
       - @users.each do |user|
         %tr
-          %td= user.first_name
-          %td= user.last_name
+          %td= user.full_name
           %td= user.email
