@@ -1,0 +1,20 @@
+
+%h1 Classrooms
+
+%table
+  %th
+    %tr
+      %th Classroom Name
+      %th Capacity
+      %th Audio Visual Resources
+      %th Location
+      %th Location URL
+    %tb
+      - @classrooms.each do |classroom|
+        %tr
+          %td= classroom.name
+          %td= classroom.capacity
+          %td= classroom.av_resources
+          %td= classroom.location
+          %td
+            = link_to 'Link', classroom.location_url
