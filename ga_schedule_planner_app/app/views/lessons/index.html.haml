@@ -1,0 +1,20 @@
+%h1 Lessons
+
+%table
+  %th
+    %tr
+      %th Course
+      %th Frequency
+      %th Link
+      %th Start
+      %th End
+    %tb
+      - @lessons.each do |lesson|
+        %tr
+          %td= lesson.course.name
+          %td= lesson.frequency
+          %td
+            = link_to 'Link', lesson.url
+          %td= lesson.start.to_formatted_s(:short)
+          %td= lesson.end.to_formatted_s(:short)
+        

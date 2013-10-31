@@ -8,7 +8,7 @@ class LessonsController < ApplicationController
   end
 
   def index 
-   
+  
   end
 
   def new 
