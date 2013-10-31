@@ -10,16 +10,36 @@
 
       %nav.navbar
         %ul.left-nav
+          %h4 Admin
+          %li Dashboard
           %li= link_to('Users', users_path)
           %li= link_to('User Authorizations', authorizations_path)
           %li= link_to('Roles', roles_path)
+          
+          %h4 Your Learning
+          %li Dashboard
           %li= link_to('Courses', courses_path)
           %li= link_to('Lessons', lessons_path)
+          
+          %h4 Your Coaching
+          %li Dashboard
+          %li Your Timetable
+          %li Your Learners
+          %li Resources
+          %li 
+
+          %h4 Management
+          %li Dashboard
           %li= link_to('Classrooms', classrooms_path)
           %li= link_to('Student Enrollments', enrollments_path)
           %li= link_to('Bookings', bookings_path)
           %li= link_to('Instructor Allocations', allocations_path)
           
+          %h4 Facilities Management
+          %li Dashboard
+          %li Classroom Bits Planning
+          %li Change Overs
+          %Li Forward Planning
 
         %ul.right-nav
           %li
@@ -37,3 +57,8 @@
         %h1 GA inna da Reggae
 
         = yield
+
+        .footer
+          %ul
+            %li Terms of Service
+            %li Privacy Policy/Your Privacy Rights
