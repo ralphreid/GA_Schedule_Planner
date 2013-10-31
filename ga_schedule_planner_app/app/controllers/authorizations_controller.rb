@@ -8,7 +8,7 @@ class AuthorizationsController < ApplicationController
   end
 
   def index 
-    # @authorizations = Authorization.all
+
   end
 
   def new 

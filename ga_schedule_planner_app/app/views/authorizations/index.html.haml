@@ -1,0 +1,14 @@
+
+%h1 User Authorizations
+
+%table
+  %th
+    %tr
+      %th User
+      %th Role
+      
+    %tb
+      - @authorizations.each do |authorization|
+        %tr
+          %td= authorization.user.full_name
+          %td= authorization.role.name
