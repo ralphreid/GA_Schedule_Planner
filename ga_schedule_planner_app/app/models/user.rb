@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :enrollments, foreign_key: 'student_id'
   has_many :lessons, :through => :enrollments
   has_many :enrollments, foreign_key: 'instructor_id'
-  has_many :lessons, :through => :instructor_allocations
+  has_many :lessons, :through => :allocations
   belongs_to :course
 
 end

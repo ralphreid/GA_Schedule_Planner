@@ -4,10 +4,10 @@ GaSchedulePlannerApp::Application.routes.draw do
   resources :courses
   resources :roles
   resources :authorizations
-  resources :instructor_allocations
+  resources :allocations
   resources :enrollments
   resources :users, only: [:index, :new, :create]
-  resources :room_bookings
+  resources :bookings
   resources :lessons
   resources :classrooms
 

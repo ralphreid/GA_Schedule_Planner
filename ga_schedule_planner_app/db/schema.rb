@@ -11,11 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131030162008) do
+ActiveRecord::Schema.define(:version => 20131031072455) do
+
+  create_table "allocations", :force => true do |t|
+    t.integer "instructor_id"
+    t.integer "lesson_id"
+  end
 
   create_table "authorizations", :force => true do |t|
     t.integer "user_id"
     t.integer "role_id"
+  end
+
+  create_table "bookings", :force => true do |t|
+    t.integer "lesson_id"
+    t.integer "classroom_id"
+    t.date    "start"
+    t.date    "finish"
   end
 
   create_table "classrooms", :force => true do |t|
@@ -39,11 +51,6 @@ ActiveRecord::Schema.define(:version => 20131030162008) do
     t.string  "payment_status"
   end
 
-  create_table "instructor_allocations", :force => true do |t|
-    t.integer "instructor_id"
-    t.integer "lesson_id"
-  end
-
   create_table "lessons", :force => true do |t|
     t.integer "course_id"
     t.string  "frequency"
@@ -55,13 +62,6 @@ ActiveRecord::Schema.define(:version => 20131030162008) do
   create_table "roles", :force => true do |t|
     t.string "name"
     t.string "description"
-  end
-
-  create_table "room_bookings", :force => true do |t|
-    t.integer "lesson_id"
-    t.integer "classroom_id"
-    t.date    "start"
-    t.date    "finish"
   end
 
   create_table "users", :force => true do |t|

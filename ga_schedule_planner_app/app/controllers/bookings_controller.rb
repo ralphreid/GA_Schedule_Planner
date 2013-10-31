@@ -1,4 +1,4 @@
-class RoomBookingsController < ApplicationController
+class BookingsController < ApplicationController
   
   load_and_authorize_resource
 
@@ -8,7 +8,7 @@ class RoomBookingsController < ApplicationController
   end
 
   def index 
-    # @roombookings = RoomBooking.all
+    
   end
 
   def new 

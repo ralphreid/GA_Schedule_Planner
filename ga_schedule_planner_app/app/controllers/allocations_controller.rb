@@ -1,4 +1,4 @@
-class InstructorAllocationsController < ApplicationController
+class AllocationsController < ApplicationController
   
   load_and_authorize_resource
 
@@ -8,7 +8,7 @@ class InstructorAllocationsController < ApplicationController
   end
 
   def index 
-    # @instructor_allocations = InstructorAllocation.all
+   
   end
 
   def new 

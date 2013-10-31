@@ -5,10 +5,10 @@ class Lesson < ActiveRecord::Base
   belongs_to :producer, :class_name => 'User'
   has_many :enrollments
   has_many :students, :through => :enrollments, :class_name => 'User'
-  has_many :instructor_allocations
-  has_many :instructors, :through => :instructor_allocations, :class_name => 'User'
-  has_many :room_bookings
-  has_many :classrooms, :through => :room_bookings
+  has_many :allocations
+  has_many :instructors, :through => :allocations, :class_name => 'User'
+  has_many :bookings
+  has_many :classrooms, :through => :bookings
   belongs_to :course
 
 

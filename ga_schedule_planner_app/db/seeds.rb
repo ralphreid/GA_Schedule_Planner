@@ -27,85 +27,85 @@ room4 = Classroom.create(name: "Montego Bay", capacity: 10, av_resources: 'proje
 room5 = Classroom.create(name: "Runaway Bay", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
 room6 = Classroom.create(name: "Port Antonio", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
 
-RoomBooking.create(lesson_id: lesson1[:id], classroom_id: room1[:id])
-RoomBooking.create(lesson_id: lesson2[:id], classroom_id: room2[:id])
-RoomBooking.create(lesson_id: lesson3[:id], classroom_id: room3[:id])
-RoomBooking.create(lesson_id: lesson4[:id], classroom_id: room4[:id])
-RoomBooking.create(lesson_id: lesson5[:id], classroom_id: room5[:id])
-RoomBooking.create(lesson_id: lesson6[:id], classroom_id: room6[:id])
+Booking.create(lesson_id: lesson1[:id], classroom_id: room1[:id])
+Booking.create(lesson_id: lesson2[:id], classroom_id: room2[:id])
+Booking.create(lesson_id: lesson3[:id], classroom_id: room3[:id])
+Booking.create(lesson_id: lesson4[:id], classroom_id: room4[:id])
+Booking.create(lesson_id: lesson5[:id], classroom_id: room5[:id])
+Booking.create(lesson_id: lesson6[:id], classroom_id: room6[:id])
 
 # Producers
-user_producer = User.create(first_name: "Bob_producer", last_name: "Marley_producer")
+user_producer = User.create(first_name: "Bob_producer", last_name: "Marley_producer", password: 't', email: 't')
 Authorization.create(user_id: user_producer[:id], role_id: role_produce[:id])
 course1.user_id = user_producer[:id]
 
-user_producer = User.create(first_name: "Jane_producer", last_name: "Foo_producer")
+user_producer = User.create(first_name: "Jane_producer", last_name: "Foo_producer", password: 't', email: 't')
 Authorization.create(user_id: user_producer[:id], role_id: role_produce[:id])
 course2.user_id = user_producer[:id]
 
-user_producer = User.create(first_name: "Mike_producer", last_name: "Jones_producer")
+user_producer = User.create(first_name: "Mike_producer", last_name: "Jones_producer", password: 't', email: 't')
 Authorization.create(user_id: user_producer[:id], role_id: role_produce[:id])
 course3.user_id = user_producer[:id]
 
 # Instructors
 
-user = User.create(first_name: "Gerry___1", last_name: "Inst__1")
+user = User.create(first_name: "Gerry___1", last_name: "Inst__1", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson1[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson1[:id])
 
-user = User.create(first_name: "Jo", last_name: "Mama")
+user = User.create(first_name: "Jo", last_name: "Mama", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson2[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson2[:id])
 
-user = User.create(first_name: "Jane", last_name: "Smith")
+user = User.create(first_name: "Jane", last_name: "Smith", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson3[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson3[:id])
 
-user = User.create(first_name: "Jimmy", last_name: "Cliff")
+user = User.create(first_name: "Jimmy", last_name: "Cliff", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson4[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson4[:id])
 
-user = User.create(first_name: "Ziggy", last_name: "Marley")
+user = User.create(first_name: "Ziggy", last_name: "Marley", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson5[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson5[:id])
 
-user = User.create(first_name: "Bill", last_name: "Clinton")
+user = User.create(first_name: "Bill", last_name: "Clinton", password: 't', email: 't')
 Authorization.create(user_id: user[:id], role_id: role_instructor[:id])
-InstructorAllocation.create(instructor_id: user[:id], lesson_id: lesson6[:id])
+Allocation.create(instructor_id: user[:id], lesson_id: lesson6[:id])
 
 # Students
 20.times do |i|
-  user = User.create(first_name: "Bob____#{i}", last_name: "Marley___#{i}")
+  user = User.create(first_name: "Bob____#{i}", last_name: "Marley___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson1[:id], payment_status: 'paid')
 end
 
 20.times do |i|
-  user = User.create(first_name: "Jane____#{i}", last_name: "Smith___#{i}")
+  user = User.create(first_name: "Jane____#{i}", last_name: "Smith___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson2[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
-  user = User.create(first_name: "Larry____#{i}", last_name: "Tony___#{i}")
+  user = User.create(first_name: "Larry____#{i}", last_name: "Tony___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson3[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
-  user = User.create(first_name: "____#{i} Bob", last_name: "Andew___#{i}")
+  user = User.create(first_name: "____#{i} Bob", last_name: "Andew___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson4[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
-  user = User.create(first_name: "____#{i} Stacy", last_name: "Jones___#{i}")
+  user = User.create(first_name: "____#{i} Stacy", last_name: "Jones___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson5[:id], payment_status: 'un-paid')
 end
 
 20.times do |i|
-  user = User.create(first_name: "____#{i} John", last_name: "Adams___#{i}")
+  user = User.create(first_name: "____#{i} John", last_name: "Adams___#{i}", password: 't', email: 't')
   authorisation = Authorization.create(user_id: user[:id], role_id: role_student[:id])
   enrollment = Enrollment.create(student_id: user[:id], lesson_id: lesson4[:id], payment_status: 'paid')
 end
