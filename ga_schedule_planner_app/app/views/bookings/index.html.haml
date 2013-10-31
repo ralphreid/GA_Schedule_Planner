@@ -1,0 +1,19 @@
+
+%h1 Bookings
+
+%table
+  %th
+    %tr
+      %th Course
+      %th Lesson
+      %th Classroom
+      %th Start
+      %th Finish
+    %tb
+      - @bookings.each do |booking|
+        %tr
+          %td= booking.lesson.course.name
+          %td= booking.lesson
+          %td= booking.classroom_id
+          %td= booking.start
+          %td= booking.finish
