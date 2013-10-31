@@ -24,7 +24,7 @@ class AuthorizationsController < ApplicationController
   end
 
   def update
-    
+    redirect_to authorizations_path
   end
 
   def destroy
