@@ -1,15 +1,15 @@
 
-%h1 Courses
+%h1 Enrollments
 
 %table
   %th
     %tr
-      %th Course Name
-      %th Course Description
-      %th Status
+      %th Student
+      %th Lesson
+      %th Payment Status
     %tb
-      - @courses.each do |course|
+      - @enrollments.each do |enrollment|
         %tr
-          %td= course.name
-          %td= course.description
-          %td= course.status
+          %td= enrollment.student_id
+          %td= enrollment.lesson_id
+          %td= enrollment.payment_status
