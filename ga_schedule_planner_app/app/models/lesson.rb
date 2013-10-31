@@ -1,6 +1,6 @@
 class Lesson < ActiveRecord::Base
   
-  attr_accessible :course_id, :frequency, :url, :start, :end
+  attr_accessible :course_id, :frequency, :url, :start, :end, :name
 
   belongs_to :producer, :class_name => 'User'
   has_many :enrollments

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131031072455) do
+ActiveRecord::Schema.define(:version => 20131031135001) do
 
   create_table "allocations", :force => true do |t|
     t.integer "instructor_id"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20131031072455) do
     t.text    "url"
     t.date    "start"
     t.date    "end"
+    t.string  "name"
   end
 
   create_table "roles", :force => true do |t|

@@ -13,12 +13,12 @@ course1 = Course.create(name: 'WDI', description: 'placeholder desc for WDI cour
 course2 = Course.create(name: 'UX', description: 'placeholder desc for UX course', status: 'active')
 course3 = Course.create(name: 'Front-End', description: 'placeholder desc for Front-End course', status: 'active')
 
-lesson1 = Lesson.create(course_id: course1[:id], frequency: 'daily', url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
-lesson2 = Lesson.create(course_id: course1[:id], frequency: 'daily', url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
-lesson3 = Lesson.create(course_id: course2[:id], frequency: 'daily', url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
-lesson4 = Lesson.create(course_id: course2[:id], frequency: 'daily', url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
-lesson5 = Lesson.create(course_id: course3[:id], frequency: "Tues & Thurs", url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
-lesson6 = Lesson.create(course_id: course3[:id], frequency: "Mon & Weds", url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
+lesson1 = Lesson.create(name: 'JamRock_35', course_id: course1[:id], frequency: 'daily', url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
+lesson2 = Lesson.create(name: 'JamRock_32', course_id: course1[:id], frequency: 'daily', url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
+lesson3 = Lesson.create(name: 'JamRock_36', course_id: course2[:id], frequency: 'daily', url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
+lesson4 = Lesson.create(name: 'JamRock_36', course_id: course2[:id], frequency: 'daily', url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
+lesson5 = Lesson.create(name: 'JamRock_39', course_id: course3[:id], frequency: "Tues & Thurs", url: 'http://www.google.com', start: 10.days.from_now.to_date, end: 100.days.from_now.to_date)
+lesson6 = Lesson.create(name: 'JamRock_40', course_id: course3[:id], frequency: "Mon & Weds", url: 'http://www.google.com', start: 20.days.from_now.to_date, end: 110.days.from_now.to_date)
 
 room1 = Classroom.create(name: "St. Ann's", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
 room2 = Classroom.create(name: "Lime Hall", capacity: 10, av_resources: 'projector', location: "St. Ann's", location_url: "https://maps.google.co.uk/maps?q=st+ann+jamaica&client=safari&oe=UTF-8&hnear=St+Ann+Parish,+Jamaica&gl=uk&t=m&z=11&iwloc=A")
