@@ -1,0 +1,15 @@
+
+%h1 Instructor Allocations
+
+%table
+  %th
+    %tr
+      %th Instructor
+      %th Course
+      %th Lesson
+    %tb
+      - @allocations.each do |allocation|
+        %tr
+          %td= allocation.instructor.full_name
+          %td= allocation.lesson.course.name
+          %td= allocation.lesson.name
