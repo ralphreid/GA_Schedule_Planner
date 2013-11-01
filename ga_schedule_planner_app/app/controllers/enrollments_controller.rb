@@ -24,7 +24,7 @@ class EnrollmentsController < ApplicationController
   end
 
   def update
-    
+    redirect_to enrollments_path
   end
 
   def destroy

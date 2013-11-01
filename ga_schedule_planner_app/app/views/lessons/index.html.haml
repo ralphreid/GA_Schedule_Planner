@@ -1,8 +1,9 @@
 %h1 Lessons
 
-%table
+%table.table.table-hover
   %th
     %tr
+      %th Name
       %th Course
       %th Frequency
       %th Link
@@ -11,10 +12,13 @@
     %tb
       - @lessons.each do |lesson|
         %tr
+          %td= lesson.name
           %td= lesson.course.name
           %td= lesson.frequency
           %td
             = link_to 'Link', lesson.url
           %td= lesson.start.to_formatted_s(:short)
           %td= lesson.end.to_formatted_s(:short)
+          %td
+            = link_to 'Enroll', new_enrollment_path(lesson)
         

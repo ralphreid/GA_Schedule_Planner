@@ -21,20 +21,24 @@
         .collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              %a{href: root_path} Home
-            
-            / ADMIN  
-            %li
               %a{href: users_path} Users
             %li
-              %a{href: authorizations_path} Authorizations
+              %a{href: authorizations_path} Auth
             %li
               %a{href: roles_path} Roles
+            %li
+              %a{href: allocations_path} Alloc
+            %li
+              %a{href: enrollments_path} Enrolls
 
 
           %ul.nav.navbar-nav.navbar-right
             %li
               %a{href: courses_path} Courses
+            %li
+              %a{href: lessons_path} Lessons
+            %li
+              %a{href: classrooms_path} Rooms
             %li
             - if current_user
               logged in as #{current_user.first_name} ,
