@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  attr_accessible :full_name, :first_name, :last_name, :password, :password_confirmation, :email
+  attr_accessible :roles, :full_name, :first_name, :last_name, :password, :password_confirmation, :email
   has_secure_password
 
   has_many :authorizations
@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
   has_many :allocations, foreign_key: 'instructor_id'
   has_many :lessons, :through => :allocations
   belongs_to :course
+
+  # def is?(role)
+  #   roles.include?(role.to_s)
+  # end
 
   # Getter
   def full_name
