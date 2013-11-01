@@ -5,7 +5,11 @@ GaSchedulePlannerApp::Application.routes.draw do
   resources :roles
   resources :authorizations
   resources :allocations
-  resources :enrollments
+  resources :enrollments do
+    member do
+      get :enroll
+    end
+  end
   resources :users, only: [:index, :new, :create]
   resources :bookings
   resources :lessons
