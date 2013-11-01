@@ -22,20 +22,49 @@
           %ul.nav.navbar-nav
             %li
               %a{href: root_path} Home
-            
-            / ADMIN  
             %li
-              %a{href: users_path} Users
+              %a{href: "#about"} About
             %li
-              %a{href: authorizations_path} Authorizations
-            %li
-              %a{href: roles_path} Roles
-
-
+              %a{href: "#contact"} Contact
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a{href: courses_path} Courses
-            %li
+              %a{href: "#about"} put Somthing
+
+    .container
+      =yield
+
+
+     
+        
+
+
+          
+          %h4 Your Learning
+          %li Dashboard
+          %li= link_to('Courses', )
+          %li= link_to('Lessons', lessons_path)
+          
+          %h4 Your Coaching
+          %li Dashboard
+          %li Your Timetable
+          %li Your Learners
+          %li Resources
+
+          %h4 Management
+          %li Dashboard
+          %li= link_to('Classrooms', classrooms_path)
+          %li= link_to('Student Enrollments', enrollments_path)
+          %li= link_to('Bookings', bookings_path)
+          %li= link_to('Instructor Allocations', allocations_path)
+          
+          %h4 Facilities Management
+          %li Dashboard
+          %li Classroom Bits Planning
+          %li Change Overs
+          %Li Forward Planning
+
+        %ul.right-nav
+          %li
             - if current_user
               logged in as #{current_user.first_name} ,
               = link_to 'Logout', logout_path, method: :delete
@@ -44,14 +73,7 @@
               or
               = link_to "Sign up", signup_path
 
-
-
-    
-          
-
-
-    .container
-      =yield
-
-      
-     
+        .footer
+          %ul
+            %li Terms of Service
+            %li Privacy Policy/Your Privacy Rights
