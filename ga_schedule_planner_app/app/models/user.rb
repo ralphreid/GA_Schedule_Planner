@@ -11,9 +11,7 @@ class User < ActiveRecord::Base
   has_many :lessons, :through => :allocations
   belongs_to :course
 
-  # def is?(role)
-  #   roles.include?(role.to_s)
-  # end
+
 
   # Getter
   def full_name
@@ -25,6 +23,10 @@ class User < ActiveRecord::Base
     split = name.split
     self.first_name = split.first
     self.last_name = split.last
+  end
+
+  def is?(role)
+  #   roles.include?(role.to_s)
   end
 
 end
