@@ -20,5 +20,5 @@
           %td= lesson.start.to_formatted_s(:short)
           %td= lesson.end.to_formatted_s(:short)
           %td
-            = link_to 'Enroll', new_enrollment_path(lesson)
+            = link_to 'Enroll', enroll_enrollment_path(lesson)
         

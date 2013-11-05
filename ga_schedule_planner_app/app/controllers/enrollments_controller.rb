@@ -13,6 +13,7 @@ class EnrollmentsController < ApplicationController
 
   def enroll
     enrollment = Enrollment.new(student_id: current_user.id, lesson_id: params[:id] )
+    enrollment.save
     redirect_to courses_path
   end
 
