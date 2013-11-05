@@ -12,7 +12,11 @@ GaSchedulePlannerApp::Application.routes.draw do
   end
   resources :users, only: [:index, :new, :create]
   resources :bookings
-  resources :lessons
+  resources :lessons do
+    collection do
+      get :my_lessons
+    end
+  end
   resources :classrooms
 
   resources :sessions, only: [:new, :create, :destroy]

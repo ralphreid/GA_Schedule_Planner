@@ -31,4 +31,12 @@ class LessonsController < ApplicationController
     
   end
 
+  def my_lessons
+    
+    @lessons = Lesson.joins(:enrollments).where('enrollments.student_id = ' + current_user.id.to_s)
+    # enrollments = Enrollment.where(student_id: current_user.id.to_s)
+    # @lessons = Lesson.where()
+    render :index
+  end
+
 end
